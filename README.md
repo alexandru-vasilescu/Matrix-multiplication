@@ -84,4 +84,4 @@ Resurse utilizate
 
 Github
 -
-https://github.com/alexandru-vasilescu/Matrix-multiplication/tree/main
+https://github.com/alexandru-vasilescu/Matrix-multiplication
