@@ -41,19 +41,19 @@ Am lucrat in cele 3 fisiere puse la dispozitie din schelet(solver_blas.c, solver
 * Am folosit utilitarul valgrind cu parametri oferiti in enunt. Am salvat in fisiere analizele cache asa cum se cere.
 * Am observat diferente foarte mari intre cele 3 metode.
 
-Din punct de vedere al intructiunilor realizate:
+**Din punct de vedere al intructiunilor realizate:**
 * Neopt are cele mai multe instructiuni(apx 5 miliarde), opt are mai putine (apx 1 Miliard) si blas are cele mai putine(250 de milioane).
 * Astfel varianta optimizata are un sfert din intructiunile variantei neoptimizate datorita accesarii memoriei cu pointeri si lucrului cu registri si varianta blas de 20 de ori mai putine.
 * Toate 3 metodele au aproximativ acelasi numar de miss-uri si 0% miss rate pe instructiuni(nivelul 1 de cache).
 
-Din punct de vedere al accesarilor memoriei:
+**Din punct de vedere al accesarilor memoriei:**
 * Varianta neoptimizate din nou are cele mai multe accesari ale memoriei cache (apx. 3 miliarde) si cele mai multe missuri.
 * Varianta optimzata are doar o zecime din accesarile variantei optimizate(doar 300 de milioane) si mai putine missuri.
 * Varianta blas are cele mai putine accesari si missuri.
 * Varianta neoptimizata are miss rateul mai mic decat varianta optimizata datorita faptului ca sunt foarte multe accesari ale aceleiasi date de mai multe ori(matricea rezultat). Varianta blas are cel mai mic miss rate deci este cea mai cache efficient
 * Din LL refs se pot observa si numarul de accesari la memoria principala. Din nou neopt are cele mai multe urmata de opt si blas.
 
-Din punct de vedere a branchurilor executate:
+**Din punct de vedere a branchurilor executate:**
 * Varianta optimizata si neoptimizata au un numar aproximativ egal de branchuri si mispredicts(acesta fiind foarte mare) datorat conditiilor din foruri.
 * Varianta blas are foarte putine branchuri fata de celelalte variante.
 
@@ -84,3 +84,4 @@ Resurse utilizate
 
 Github
 -
+https://github.com/alexandru-vasilescu/Matrix-multiplication/tree/main
